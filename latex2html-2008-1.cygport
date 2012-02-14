@@ -1,0 +1,18 @@
+
+HOMEPAGE="http://www.latex2html.org/"
+SRC_URI="http://www.latex2html.org/~latex2ht/current/${P}.tar.gz"
+PATCH_URI="2008-cygwin.patch"
+
+# already provided by texlive-collection-latexrecommended
+DISTCLEANFILES="texinputs/url.sty texinputs/latin9.def"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygconf --shlibdir=/usr/share/${PN} \
+		--enable-eps --enable-gif --enable-png \
+		--enable-paths --enable-pk --enable-wrapper \
+		--with-texpath=/usr/share/texmf/tex/latex/html \
+		--without-mktexlsr
+	cygmake
+}

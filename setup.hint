@@ -1,0 +1,7 @@
+category: Publishing
+requires: ghostscript netpbm perl texlive-collection-basic texlive-collection-latexrecommended
+sdesc: "LaTeX to HTML converter"
+ldesc: "LaTeX2HTML is a converter written in Perl that converts LaTeX 
+documents to HTML. This way e.g. scientific papers - primarily typeset 
+for printing - can be put on the Web for online viewing. LaTeX2HTML does 
+also a good job in rapid web site deployment."
